@@ -1,0 +1,258 @@
+[gd_scene load_steps=57 format=2]
+
+[ext_resource path="res://Sporegrounds/Decorations/Backgrounds/BattleBackground.png" type="Texture" id=1]
+[ext_resource path="res://First_Banana.gd" type="Script" id=2]
+[ext_resource path="res://Sporegrounds/Mushroom/Mushroom Animations/Idle Animations/Actual Idle Frame 1.png" type="Texture" id=3]
+[ext_resource path="res://Sporegrounds/Mushroom/Mushroom Animations/Idle Animations/Actual Idle Frame 4.png-c4f2d4b1826f902ead9524cb727a8947.stex" type="Texture" id=4]
+[ext_resource path="res://Sporegrounds/Mushroom/Mushroom Animations/Attack Animations/Knife Animation/YShardAttack4.png" type="Texture" id=5]
+[ext_resource path="res://Sporegrounds/Mushroom/Mushroom Animations/Attack Animations/Knife Animation/YShardAttack1.png" type="Texture" id=6]
+[ext_resource path="res://Sporegrounds/Enemies/Single/Idle/Banana2.png" type="Texture" id=7]
+[ext_resource path="res://Sporegrounds/Enemies/Single/Idle/Banana3.png" type="Texture" id=8]
+[ext_resource path="res://Sporegrounds/Enemies/Single/Idle/Banana1.png" type="Texture" id=9]
+[ext_resource path="res://Sporegrounds/Enemies/Single/Idle/Banana4.png" type="Texture" id=10]
+[ext_resource path="res://Control.gd" type="Script" id=11]
+[ext_resource path="res://Sporegrounds/Mushroom/Mushroom Animations/Attack Animations/Knife Animation/YShardAttack2.png" type="Texture" id=12]
+[ext_resource path="res://Sporegrounds/Mushroom/Mushroom Animations/Attack Animations/Knife Animation/YShardAttack3.png" type="Texture" id=13]
+[ext_resource path="res://Sporegrounds/Mushroom/ShardIdle1.png" type="Texture" id=14]
+[ext_resource path="res://Sporegrounds/Mushroom/ShardIdle2.png" type="Texture" id=15]
+[ext_resource path="res://Sporegrounds/GUI/Buttons/Turn Based/Others/Attack Button.png" type="Texture" id=16]
+[ext_resource path="res://Sporegrounds/Mushroom/ShardIdle3.png" type="Texture" id=17]
+[ext_resource path="res://Sporegrounds/Mushroom/ShardIdle4.png" type="Texture" id=18]
+[ext_resource path="res://Sporegrounds/Mushroom/Mushroom Animations/Idle Animations/Actual Idle Frame 2.png" type="Texture" id=19]
+[ext_resource path="res://Sporegrounds/Mushroom/Mushroom Animations/Idle Animations/Actual Idle Frame 3.png" type="Texture" id=20]
+[ext_resource path="res://Sporegrounds/Mushroom/Mushroom Animations/Attack Animations/Punch Animation/punch1.png" type="Texture" id=21]
+[ext_resource path="res://Sporegrounds/Mushroom/Mushroom Animations/Attack Animations/Punch Animation/punch1.png" type="Texture" id=22]
+[ext_resource path="res://Sporegrounds/Mushroom/Mushroom Animations/Attack Animations/Punch Animation/punch4.png" type="Texture" id=23]
+[ext_resource path="res://Sporegrounds/Mushroom/Mushroom Animations/Attack Animations/Punch Animation/punch3.png" type="Texture" id=24]
+[ext_resource path="res://Sporegrounds/Enemies/Single/hurt/BananaHurt.png" type="Texture" id=25]
+[ext_resource path="res://BG3.png" type="Texture" id=26]
+[ext_resource path="res://Sporegrounds/Enemies/Group/Idle/BGA1.png" type="Texture" id=27]
+[ext_resource path="res://Sporegrounds/Enemies/Group/Idle/BGA2.png" type="Texture" id=28]
+[ext_resource path="res://Sporegrounds/Enemies/Group/Idle/BGA3.png" type="Texture" id=29]
+[ext_resource path="res://BG4.png" type="Texture" id=30]
+[ext_resource path="res://BG2.png" type="Texture" id=31]
+[ext_resource path="res://Sporegrounds/Enemies/Group/Idle/BGA4.png" type="Texture" id=32]
+[ext_resource path="res://BG1.png" type="Texture" id=33]
+[ext_resource path="res://Sporegrounds/GUI/Buttons/Turn Based/Attacks/PunchButton.png" type="Texture" id=34]
+[ext_resource path="res://Sporegrounds/GUI/Buttons/Turn Based/Others/BackButton.png" type="Texture" id=35]
+[ext_resource path="res://Sporegrounds/Enemies/Single/Attack/SingleAttack1.png" type="Texture" id=36]
+[ext_resource path="res://Sporegrounds/Enemies/Single/Attack/SingleAttack2.png" type="Texture" id=37]
+[ext_resource path="res://Sporegrounds/Enemies/Single/Attack/SingleAttack3.png" type="Texture" id=38]
+[ext_resource path="res://Sporegrounds/GUI/Buttons/Turn Based/Attacks/SporeAttackButton.png" type="Texture" id=39]
+[ext_resource path="res://Sporegrounds/Enemies/Single/Attack/SingleAttack4.png" type="Texture" id=40]
+[ext_resource path="res://Sporegrounds/GUI/Buttons/Turn Based/Attacks/Stab Button.png" type="Texture" id=41]
+[ext_resource path="res://Sporegrounds/Mushroom/MushyHurt.png" type="Texture" id=42]
+[ext_resource path="res://Sporegrounds/Mushroom/Mushroom Animations/Attack Animations/Spore Animation/Spore3.png" type="Texture" id=43]
+[ext_resource path="res://Sporegrounds/Mushroom/Mushroom Animations/Attack Animations/Spore Animation/Spore5.png" type="Texture" id=44]
+[ext_resource path="res://Sporegrounds/Mushroom/Mushroom Animations/Attack Animations/Spore Animation/Spore7.png" type="Texture" id=45]
+[ext_resource path="res://Sporegrounds/Mushroom/Mushroom Animations/Attack Animations/Spore Animation/Spore1.png" type="Texture" id=46]
+[ext_resource path="res://Sporegrounds/Mushroom/Mushroom Animations/Attack Animations/Spore Animation/Spore2.png" type="Texture" id=47]
+[ext_resource path="res://Sporegrounds/Mushroom/Mushroom Animations/Attack Animations/Spore Animation/Spore4.png" type="Texture" id=48]
+[ext_resource path="res://Sporegrounds/Mushroom/Mushroom Animations/Attack Animations/Spore Animation/Spore8.png" type="Texture" id=49]
+[ext_resource path="res://Sporegrounds/Mushroom/Mushroom Animations/Attack Animations/Spore Animation/Spore6.png" type="Texture" id=50]
+[ext_resource path="res://Sporegrounds/GUI/HP/FinaleHPFrame-1.png.png" type="Texture" id=51]
+[ext_resource path="res://Sporegrounds/GUI/HP/HPFrame.png" type="Texture" id=52]
+[ext_resource path="res://Sporegrounds/GUI/HP/EmptyFrame.png" type="Texture" id=53]
+
+[sub_resource type="SpriteFrames" id=2]
+animations = [ {
+"frames": [ ExtResource( 46 ), ExtResource( 47 ), ExtResource( 43 ), ExtResource( 48 ), ExtResource( 50 ), ExtResource( 44 ), ExtResource( 45 ), ExtResource( 49 ) ],
+"loop": false,
+"name": "Spore",
+"speed": 14.0
+}, {
+"frames": [ ExtResource( 22 ), ExtResource( 21 ), ExtResource( 24 ), ExtResource( 23 ) ],
+"loop": false,
+"name": "Attack",
+"speed": 12.0
+}, {
+"frames": [ ExtResource( 3 ), ExtResource( 19 ), ExtResource( 20 ), ExtResource( 4 ) ],
+"loop": true,
+"name": "Idle",
+"speed": 8.0
+}, {
+"frames": [ ExtResource( 6 ), ExtResource( 12 ), ExtResource( 13 ), ExtResource( 5 ) ],
+"loop": false,
+"name": "YellowAttack",
+"speed": 14.0
+}, {
+"frames": [ ExtResource( 14 ), ExtResource( 15 ), ExtResource( 17 ), ExtResource( 18 ) ],
+"loop": true,
+"name": "YellowIdle",
+"speed": 8.0
+}, {
+"frames": [ ExtResource( 42 ) ],
+"loop": false,
+"name": "Hit",
+"speed": 5.0
+} ]
+
+[sub_resource type="SpriteFrames" id=3]
+animations = [ {
+"frames": [ ExtResource( 27 ), ExtResource( 28 ), ExtResource( 29 ), ExtResource( 32 ) ],
+"loop": false,
+"name": "Attack",
+"speed": 14.0
+}, {
+"frames": [ ExtResource( 33 ), ExtResource( 31 ), ExtResource( 26 ), ExtResource( 30 ) ],
+"loop": true,
+"name": "Idle",
+"speed": 8.0
+}, {
+"frames": [  ],
+"loop": true,
+"name": "Hit",
+"speed": 5.0
+} ]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 36 ), ExtResource( 37 ), ExtResource( 38 ), ExtResource( 40 ) ],
+"loop": false,
+"name": "Attack",
+"speed": 14.0
+}, {
+"frames": [ ExtResource( 9 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 10 ) ],
+"loop": true,
+"name": "Idle",
+"speed": 8.0
+}, {
+"frames": [ ExtResource( 25 ) ],
+"loop": true,
+"name": "Hit",
+"speed": 1.0
+} ]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource( 2 )
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="CanvasLayer"]
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/ParallaxBackground"]
+margin_right = 1544.0
+margin_bottom = 847.0
+texture = ExtResource( 1 )
+expand = true
+
+[node name="Control" type="Control" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+script = ExtResource( 11 )
+
+[node name="Mushy" type="AnimatedSprite" parent="Control"]
+position = Vector2( 296, 624 )
+scale = Vector2( 2, 2 )
+frames = SubResource( 2 )
+animation = "Idle"
+frame = 1
+playing = true
+
+[node name="Banana_Group" type="AnimatedSprite" parent="Control"]
+visible = false
+position = Vector2( 1184, 536 )
+scale = Vector2( 2, 1.875 )
+frames = SubResource( 3 )
+animation = "Idle"
+frame = 1
+playing = true
+flip_h = true
+
+[node name="Banana_Group_Health" type="TextureProgress" parent="Control/Banana_Group"]
+margin_left = -79.9999
+margin_top = -209.067
+margin_right = 304.0
+margin_bottom = -17.0667
+rect_scale = Vector2( 0.5, 0.5 )
+value = 100.0
+texture_under = ExtResource( 53 )
+texture_over = ExtResource( 52 )
+texture_progress = ExtResource( 51 )
+texture_progress_offset = Vector2( 72, 78 )
+
+[node name="Banana" type="AnimatedSprite" parent="Control"]
+position = Vector2( 1269, 611 )
+scale = Vector2( 2, 2 )
+frames = SubResource( 1 )
+animation = "Idle"
+playing = true
+flip_h = true
+
+[node name="BananaHealth" type="TextureProgress" parent="Control/Banana"]
+anchor_top = 0.117
+anchor_right = 0.404
+anchor_bottom = 0.117
+margin_left = -98.5
+margin_top = -167.964
+margin_right = 207.932
+margin_bottom = 24.036
+rect_scale = Vector2( 0.5, 0.5 )
+value = 100.0
+rounded = true
+texture_under = ExtResource( 53 )
+texture_over = ExtResource( 52 )
+texture_progress = ExtResource( 51 )
+texture_progress_offset = Vector2( 72, 78 )
+
+[node name="Attack" type="TextureButton" parent="Control"]
+margin_left = 568.0
+margin_top = 456.0
+margin_right = 1003.0
+margin_bottom = 860.0
+action_mode = 0
+texture_normal = ExtResource( 16 )
+expand = true
+stretch_mode = 4
+
+[node name="Punch" type="TextureButton" parent="Control"]
+margin_left = 480.0
+margin_top = 400.0
+margin_right = 736.0
+margin_bottom = 656.0
+texture_normal = ExtResource( 34 )
+expand = true
+
+[node name="Spores" type="TextureButton" parent="Control"]
+margin_left = 480.0
+margin_top = 592.0
+margin_right = 736.0
+margin_bottom = 848.0
+texture_normal = ExtResource( 39 )
+expand = true
+
+[node name="Stab" type="TextureButton" parent="Control"]
+margin_left = 752.0
+margin_top = 400.0
+margin_right = 1008.0
+margin_bottom = 656.0
+texture_normal = ExtResource( 41 )
+texture_pressed = ExtResource( 41 )
+expand = true
+
+[node name="Attack_Back" type="TextureButton" parent="Control"]
+margin_left = 760.0
+margin_top = 592.0
+margin_right = 1016.0
+margin_bottom = 848.0
+texture_normal = ExtResource( 35 )
+expand = true
+
+[node name="ProgressBar" type="TextureProgress" parent="Control"]
+margin_left = 96.0
+margin_top = 336.0
+margin_right = 480.0
+margin_bottom = 528.0
+value = 100.0
+texture_under = ExtResource( 53 )
+texture_over = ExtResource( 52 )
+texture_progress = ExtResource( 51 )
+texture_progress_offset = Vector2( 72, 78 )
+
+[connection signal="animation_finished" from="Control/Mushy" to="Control" method="_on_Mushy_animation_finished"]
+[connection signal="animation_finished" from="Control/Banana" to="Control" method="_on_Banana_animation_finished"]
+[connection signal="pressed" from="Control/Attack" to="Control" method="_on_Attack_pressed"]
+[connection signal="pressed" from="Control/Punch" to="Control" method="_on_Punch_pressed"]
+[connection signal="pressed" from="Control/Spores" to="Control" method="_on_Spores_pressed"]
+[connection signal="pressed" from="Control/Stab" to="Control" method="_on_Stab_pressed"]
+[connection signal="pressed" from="Control/Attack_Back" to="Control" method="_on_Attack_Back_pressed"]

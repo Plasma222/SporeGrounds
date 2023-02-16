@@ -1,0 +1,56 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://Death_Scene.gd" type="Script" id=1]
+[ext_resource path="res://Sporegrounds/GUI/Buttons/Pause and End/Exit Button.png" type="Texture" id=2]
+[ext_resource path="res://Sporegrounds/GUI/Buttons/Pause and End/Retry Button.png" type="Texture" id=3]
+[ext_resource path="res://Sporegrounds/Titles/spore grounds.png" type="Texture" id=4]
+[ext_resource path="res://Sporegrounds/GUI/Chat Boxes/YouWin.png" type="Texture" id=5]
+[ext_resource path="res://Sporegrounds/GUI/Chat Boxes/YouLose.png" type="Texture" id=6]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="YouWin" type="Sprite" parent="."]
+visible = false
+position = Vector2( 294, 539 )
+scale = Vector2( 3.54583, 4.2037 )
+texture = ExtResource( 5 )
+
+[node name="Control" type="Control" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+
+[node name="Resume" type="TextureButton" parent="Control"]
+margin_left = 676.0
+margin_top = 295.0
+margin_right = 985.0
+margin_bottom = 539.0
+texture_normal = ExtResource( 3 )
+expand = true
+stretch_mode = 4
+
+[node name="Exit" type="TextureButton" parent="Control"]
+margin_left = 676.0
+margin_top = 587.0
+margin_right = 985.0
+margin_bottom = 840.0
+texture_normal = ExtResource( 2 )
+expand = true
+stretch_mode = 4
+
+[node name="TextureRect" type="TextureRect" parent="Control"]
+margin_left = 566.0
+margin_top = -119.0
+margin_right = 1032.0
+margin_bottom = 361.0
+texture = ExtResource( 4 )
+expand = true
+
+[node name="YouLose" type="Sprite" parent="."]
+visible = false
+position = Vector2( 299, 539 )
+scale = Vector2( 3.60625, 4.49259 )
+texture = ExtResource( 6 )
+
+[connection signal="pressed" from="Control/Resume" to="." method="_on_Resume_pressed"]
+[connection signal="pressed" from="Control/Exit" to="." method="_on_Exit_pressed"]
