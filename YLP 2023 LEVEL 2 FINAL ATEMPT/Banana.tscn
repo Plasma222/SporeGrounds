@@ -1,0 +1,194 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://player and enemies/thumbnail_bat-6.png.png" type="Texture" id=1]
+[ext_resource path="res://player and enemies/thumbnail_bat-7.png.png" type="Texture" id=2]
+[ext_resource path="res://player and enemies/thumbnail_bat-1.png.png" type="Texture" id=3]
+[ext_resource path="res://player and enemies/thumbnail_bat-4.png.png" type="Texture" id=4]
+[ext_resource path="res://player and enemies/thumbnail_bat-2.png.png" type="Texture" id=5]
+[ext_resource path="res://player and enemies/thumbnail_bat-3.png.png" type="Texture" id=6]
+[ext_resource path="res://player and enemies/thumbnail_bat-5.png.png" type="Texture" id=7]
+
+[sub_resource type="SpriteFrames" id=2]
+animations = [ {
+"frames": [ null, null, null, null ],
+"loop": false,
+"name": "Attack",
+"speed": 12.0
+}, {
+"frames": [ null ],
+"loop": false,
+"name": "Hit",
+"speed": 5.0
+}, {
+"frames": [ null, null, null, null ],
+"loop": true,
+"name": "Idle",
+"speed": 8.0
+}, {
+"frames": [ null, null, null, null, null, null, null, null ],
+"loop": false,
+"name": "Spore",
+"speed": 14.0
+}, {
+"frames": [ null, null, null, null ],
+"loop": false,
+"name": "YellowAttack",
+"speed": 14.0
+}, {
+"frames": [ null, null, null, null ],
+"loop": true,
+"name": "YellowIdle",
+"speed": 8.0
+} ]
+
+[sub_resource type="SpriteFrames" id=3]
+animations = [ {
+"frames": [ ExtResource( 3 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 4 ), ExtResource( 7 ), ExtResource( 1 ), ExtResource( 2 ) ],
+"loop": false,
+"name": "Attack",
+"speed": 21.0
+}, {
+"frames": [  ],
+"loop": true,
+"name": "Hit",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 3 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 4 ), ExtResource( 7 ), ExtResource( 1 ), ExtResource( 2 ) ],
+"loop": true,
+"name": "Idle",
+"speed": 8.0
+} ]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ null, null, null, null ],
+"loop": false,
+"name": "Attack",
+"speed": 14.0
+}, {
+"frames": [ null ],
+"loop": true,
+"name": "Hit",
+"speed": 1.0
+}, {
+"frames": [ null, null, null, null ],
+"loop": true,
+"name": "Idle",
+"speed": 8.0
+} ]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="CanvasLayer"]
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/ParallaxBackground"]
+margin_right = 1544.0
+margin_bottom = 847.0
+expand = true
+
+[node name="Control" type="Control" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+
+[node name="Mushy" type="AnimatedSprite" parent="Control"]
+position = Vector2( 296, 624 )
+scale = Vector2( 2, 2 )
+frames = SubResource( 2 )
+animation = "Idle"
+frame = 3
+playing = true
+
+[node name="Banana_Group" type="AnimatedSprite" parent="Control"]
+position = Vector2( 652, 244 )
+scale = Vector2( 2, 1.875 )
+frames = SubResource( 3 )
+animation = "Idle"
+frame = 2
+playing = true
+flip_h = true
+
+[node name="Banana_Group_Health" type="TextureProgress" parent="Control/Banana_Group"]
+margin_left = -79.9999
+margin_top = -209.067
+margin_right = 304.0
+margin_bottom = -17.0667
+rect_scale = Vector2( 0.5, 0.5 )
+value = 100.0
+texture_progress_offset = Vector2( 72, 78 )
+
+[node name="Banana" type="AnimatedSprite" parent="Control"]
+position = Vector2( 1269, 611 )
+scale = Vector2( 2, 2 )
+frames = SubResource( 1 )
+animation = "Idle"
+frame = 2
+playing = true
+flip_h = true
+
+[node name="BananaHealth" type="TextureProgress" parent="Control/Banana"]
+anchor_top = 0.117
+anchor_right = 0.404
+anchor_bottom = 0.117
+margin_left = -98.5
+margin_top = -167.964
+margin_right = 207.932
+margin_bottom = 24.036
+rect_scale = Vector2( 0.5, 0.5 )
+value = 100.0
+rounded = true
+texture_progress_offset = Vector2( 72, 78 )
+
+[node name="Attack" type="TextureButton" parent="Control"]
+margin_left = 568.0
+margin_top = 456.0
+margin_right = 1003.0
+margin_bottom = 860.0
+action_mode = 0
+expand = true
+stretch_mode = 4
+
+[node name="Punch" type="TextureButton" parent="Control"]
+margin_left = 480.0
+margin_top = 400.0
+margin_right = 736.0
+margin_bottom = 656.0
+expand = true
+
+[node name="Spores" type="TextureButton" parent="Control"]
+margin_left = 480.0
+margin_top = 592.0
+margin_right = 736.0
+margin_bottom = 848.0
+expand = true
+
+[node name="Stab" type="TextureButton" parent="Control"]
+margin_left = 752.0
+margin_top = 400.0
+margin_right = 1008.0
+margin_bottom = 656.0
+expand = true
+
+[node name="Attack_Back" type="TextureButton" parent="Control"]
+margin_left = 760.0
+margin_top = 592.0
+margin_right = 1016.0
+margin_bottom = 848.0
+expand = true
+
+[node name="ProgressBar" type="TextureProgress" parent="Control"]
+margin_left = 96.0
+margin_top = 336.0
+margin_right = 480.0
+margin_bottom = 528.0
+value = 100.0
+texture_progress_offset = Vector2( 72, 78 )
+
+[connection signal="animation_finished" from="Control/Mushy" to="Control" method="_on_Mushy_animation_finished"]
+[connection signal="animation_finished" from="Control/Banana" to="Control" method="_on_Banana_animation_finished"]
+[connection signal="pressed" from="Control/Attack" to="Control" method="_on_Attack_pressed"]
+[connection signal="pressed" from="Control/Punch" to="Control" method="_on_Punch_pressed"]
+[connection signal="pressed" from="Control/Spores" to="Control" method="_on_Spores_pressed"]
+[connection signal="pressed" from="Control/Stab" to="Control" method="_on_Stab_pressed"]
+[connection signal="pressed" from="Control/Attack_Back" to="Control" method="_on_Attack_Back_pressed"]
