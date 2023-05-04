@@ -1,0 +1,38 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://crystalman-7.png_1.png" type="Texture" id=1]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 1 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 87.0698, 81.0159 )
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 38.4496, 45.873 )
+
+[node name="AnimatedSprite" type="AnimatedSprite"]
+position = Vector2( 272.5, 151 )
+scale = Vector2( 2.01563, 1.96875 )
+frames = SubResource( 1 )
+
+[node name="KinematicBody2D" type="KinematicBody2D" parent="."]
+scale = Vector2( 1, 1 )
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="KinematicBody2D"]
+position = Vector2( -2.97675, -2.79367 )
+scale = Vector2( 1, 1 )
+shape = SubResource( 2 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2( 21, 15 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( -36.3798, -13.127 )
+scale = Vector2( 1, 1 )
+shape = SubResource( 3 )
